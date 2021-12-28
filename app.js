@@ -3,7 +3,8 @@ const startBtn = document.querySelector('#start'),
    timeList = document.querySelector('#time-list'),
    timeEl = document.querySelector('#time'),
    board = document.querySelector('#board');
-colors = ['red', 'lemon', 'blue', 'green', 'purple', 'yellow', 'fuchsia']
+
+colors = ['#ecf542','#fa0c24','##0cfa0c','#f7fcf7','#f307f7','#1a2beb','#f3f707','#f5f5eb','#21fce3','#0c0d0d','#0a0a0a','#e05024','#2cfa02']
 
 let time = 0;
 let score = 0;
@@ -55,7 +56,8 @@ function setTime(value) {
 
 function finishGame() {
    timeEl.parentNode.classList.add('hide')
-   board.innerHTML = `<h1>Cчет: <span class="primary">${score}</span></h1>`
+   board.innerHTML = `<h1>Score: <span class="primary">${score}</span></h1>`
+//    play again
 }
 
 function createRandomCircle() {
@@ -89,3 +91,5 @@ function setColor(element) {
    element.style.background = color;
    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 }
+
+
